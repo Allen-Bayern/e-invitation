@@ -32,6 +32,7 @@ function webpackConfigCallback(environments: Record<string, unknown>): Configura
         isDev,
         isProd,
         isCssWithSourceMap: () => isProd,
+        title: '我们的婚礼',
     });
 
     ['vue-modules', 'vue', 'css-module', 'css-normal'].forEach(type => {
