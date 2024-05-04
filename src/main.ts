@@ -4,12 +4,10 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 import App from './App.vue';
 import '@/assets/_global-conf.scss';
 
-// Vue app
-const app = createApp(App);
-
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-    app.component(key, component);
-}
-
-// mount app
-installPlugins(app).mount('#app');
+installPlugins(
+    // add element-plus icons
+    Object.entries(ElementPlusIconsVue).reduce((prev, item) => {
+        const [key, component] = item;
+        return prev.component(key, component);
+    }, createApp(App))
+).mount('#app');
