@@ -1,7 +1,9 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { H5Container } from '@/components';
+</script>
 
 <template>
-    <div>来蔚县！</div>
+    <h5-container class="how-to"> 来吧！ </h5-container>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>

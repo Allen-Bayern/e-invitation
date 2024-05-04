@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { H5Container } from '@/components';
 
 const router = useRouter();
 
@@ -23,22 +24,24 @@ function goInvitation() {
 </script>
 
 <template>
-    <div class="home">
-        <h1 class="home-title">诚邀您来参加我们的婚礼！</h1>
-        <div class="home-input">
-            <p class="home-input-label">请输入您的姓名:</p>
-            <el-input
-                class="home-input-self"
-                v-model="yourName"
-            />
+    <h5-container>
+        <div class="home">
+            <h1 class="home-title">诚邀您来参加我们的婚礼！</h1>
+            <div class="home-input">
+                <p class="home-input-label">请输入您的姓名:</p>
+                <el-input
+                    class="home-input-self"
+                    v-model="yourName"
+                />
+            </div>
+            <button
+                class="go-invite"
+                @click="goInvitation"
+            >
+                请查收您的电子请帖
+            </button>
         </div>
-        <button
-            class="go-invite"
-            @click="goInvitation"
-        >
-            请查收您的电子请帖
-        </button>
-    </div>
+    </h5-container>
 </template>
 
 <style lang="scss" scoped>
