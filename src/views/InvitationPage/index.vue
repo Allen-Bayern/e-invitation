@@ -99,7 +99,7 @@ onMounted(() => {
     &-last {
         font-size: 24rpx;
         font-weight: 400;
-        margin-top: 300rpx;
+        margin-top: 20vh;
         color: #f77b44;
     }
 }
