@@ -1,10 +1,17 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
+const router = useRouter();
 
 const yourName = ref('');
+
+function howToYuxian() {
+    router.push({
+        name: 'HowToCome',
+    });
+}
 
 onMounted(() => {
     const { name } = route.query;
@@ -22,7 +29,12 @@ onMounted(() => {
         <div class="inv-page-main">
             <p :class="['inv-page-main-p', 'inv-page-main-couple']">赵正阳 & 陈姿颖</p>
             <p :class="['inv-page-main-p', 'inv-page-main-date']">2024.7.26</p>
-            <p :class="['inv-page-main-p', 'inv-page-main-position']">河北蔚县锦豪饭店</p>
+            <p
+                :class="['inv-page-main-p', 'inv-page-main-position']"
+                @click="howToYuxian"
+            >
+                河北蔚县锦豪饭店
+            </p>
             <p :class="['inv-page-main-p', 'inv-page-main-welcome']">诚邀{{ yourName }}阁下光临</p>
         </div>
         <p class="inv-page-last">You are cordially invited to visit us.</p>
@@ -75,6 +87,8 @@ onMounted(() => {
 
         &-position {
             margin-bottom: 1em;
+            padding-bottom: 0.2em;
+            border-bottom: 1px dotted #745100;
         }
 
         &-welcome {

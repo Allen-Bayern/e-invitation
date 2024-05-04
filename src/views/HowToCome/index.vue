@@ -81,6 +81,10 @@ onMounted(() => {
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
+
+        &-llq {
+            color: #745100;
+        }
     }
 }
 </style>
