@@ -68,7 +68,7 @@ onMounted(() => {
     }
 
     &-main {
-        margin-top: 340rpx;
+        margin-top: 25vh;
         font-size: 36rpx;
         display: flex;
         flex-flow: column;
