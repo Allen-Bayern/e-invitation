@@ -7,6 +7,16 @@ const routes: RouteRecordRaw[] = [
         name: 'HomeView',
         component: () => import(/* webpackChunkName: "home" */ './HomeView/index.vue'),
     },
+    {
+        path: '/invite',
+        name: 'InvitationPage',
+        component: () => import(/* webpackChunkName: "InvitationPage" */ './InvitationPage/index.vue'),
+    },
+    {
+        path: '/how-to-come',
+        name: 'HowToCome',
+        component: () => import(/* webpackChunkName: "HowToCome" */ './HowToCome/index.vue'),
+    },
 ];
 
 /** @description the router of the project */

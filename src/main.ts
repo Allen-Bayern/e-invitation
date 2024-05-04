@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import { installPlugins } from '@/plugins';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 import App from './App.vue';
-import '@/assets/_global-vars.scss';
+import '@/assets/_global-conf.scss';
 
 // Vue app
 const app = createApp(App);
