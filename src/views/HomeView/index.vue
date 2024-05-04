@@ -17,7 +17,7 @@ function goInvitation() {
     router.push({
         name: 'InvitationPage',
         query: {
-            name: yourName.value,
+            name: window.encodeURIComponent(yourName.value),
         },
     });
 }
@@ -35,7 +35,7 @@ function goInvitation() {
                 />
             </div>
             <button
-                class="go-invite"
+                class="go-invite home-btn"
                 @click="goInvitation"
             >
                 请查收您的电子请帖
@@ -51,6 +51,12 @@ function goInvitation() {
     overflow-x: hidden;
     overflow-y: auto;
     padding: 24rpx;
+    color: #745100;
+
+    &-title {
+        font-size: 48rpx;
+        margin-bottom: 1em;
+    }
 
     &-input {
         display: flex;
@@ -64,6 +70,13 @@ function goInvitation() {
         &-self {
             width: 360rpx;
         }
+    }
+
+    &-btn {
+        color: #745100;
+        font-size: 32rpx;
+        margin-top: 32rpx;
+        padding: 0.5em;
     }
 }
 </style>

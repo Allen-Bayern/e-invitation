@@ -10,7 +10,7 @@ onMounted(() => {
     const { name } = route.query;
 
     if (typeof name === 'string') {
-        yourName.value = name;
+        yourName.value = decodeURIComponent(name);
     }
 });
 </script>

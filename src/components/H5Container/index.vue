@@ -4,7 +4,7 @@ import { computed } from 'vue';
 const props = withDefaults(
     defineProps<{
         /** @description Y轴是否需要overflow */
-        isYOverflow: boolean;
+        isYOverflow?: boolean;
     }>(),
     {
         isYOverflow() {
@@ -13,6 +13,7 @@ const props = withDefaults(
     }
 );
 
+/** @description Y轴overflow值 */
 const overflowYValue = computed(() => (props.isYOverflow ? 'auto' : 'hidden'));
 </script>
 
