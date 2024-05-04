@@ -128,10 +128,7 @@ function createPreStyleConf(
     }[] = [
         {
             loader: isDev ? 'vue-style-loader' : miniLoader,
-            options: {
-                sourceMap,
-                shadowMode: false,
-            },
+            options: isDev ? { sourceMap, shadowMode: false } : {},
         },
         {
             loader: 'css-loader',
